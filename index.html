@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClassTrack | Attendance and Course Progress</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>ClassTrack</h1>
+    <p>Take attendance and follow every student through the course, module by module.</p>
+  </header>
+
+  <main>
+    <section class="panel" aria-labelledby="attTitle">
+      <div class="panel-head">
+        <h2 id="attTitle">Attendance</h2>
+        <label class="date-field">Session date <input type="date" id="sessionDate"></label>
+      </div>
+      <ul id="attendanceList" class="att-list"></ul>
+      <p id="attSummary" class="muted"></p>
+    </section>
+
+    <section class="panel" aria-labelledby="stuTitle">
+      <div class="panel-head">
+        <h2 id="stuTitle">Students and progress</h2>
+        <form id="addForm" class="add-form">
+          <label class="sr-only" for="newName">Student name</label>
+          <input id="newName" placeholder="Student name" maxlength="50" required>
+          <button class="btn solid" type="submit">Add student</button>
+        </form>
+      </div>
+      <div id="students" class="cards"></div>
+      <div class="foot-actions">
+        <button id="exportBtn" class="btn ghost" type="button">Export CSV</button>
+        <button id="sampleBtn" class="btn ghost" type="button">Load sample students</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
